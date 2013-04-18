@@ -1,0 +1,36 @@
+#!/bin/bash
+
+function changemac() {
+  sudo ifconfig en0 ether $1
+}
+
+function whatismyip() {
+  curl ifconfig.me
+}
+
+function colors() {
+  for i in $(seq 0 8); do printf "\x1b[38;5;${i}m%03d " $i; done
+  printf "\n"
+  for i in $(seq 8 16); do printf "\x1b[38;5;${i}m%03d " $i; done
+
+  printf "\n\n"
+
+  for g in $(seq 0 5); do
+    for r in $(seq 0 5); do
+      for b in $(seq 0 5); do
+        c=$[16 + $[r * 36] + $[g * 6] + $b];
+        printf "\x1b[38;5;${c}m%03d " $c
+      done
+      printf "\x1b[0m "
+    done
+    printf "\n"
+  done
+
+  printf "\n"
+
+  for i in $(seq 232 243); do printf "\x1b[38;5;${i}m%03d " $i; done
+  printf "\n"
+  for i in $(seq 244 255); do printf "\x1b[38;5;${i}m%03d " $i; done
+
+  printf "\x1b[0m\n"
+}

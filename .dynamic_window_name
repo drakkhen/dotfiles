@@ -1,0 +1,9 @@
+#!/bin/bash
+
+function debug_trap {
+  echo -ne "\033k`hostname -s`/`echo $BASH_COMMAND | awk '{print $1}'`\033\\"
+}
+PROMPT_COMMAND='echo -ne "\033k`hostname -s`\033\\"'
+trap debug_trap DEBUG
+
+
