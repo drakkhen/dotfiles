@@ -47,3 +47,7 @@
     status = auto
 [core]
     pager = less -M
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
