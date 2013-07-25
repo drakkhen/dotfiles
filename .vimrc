@@ -15,6 +15,7 @@ set cursorline
 set showcmd
 set wildmenu
 set showtabline=2
+set number
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
@@ -40,6 +41,7 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader># :set number!<cr>
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
