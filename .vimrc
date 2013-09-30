@@ -212,11 +212,11 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
 " highlight tabs
-highlight Tabs ctermbg=red guibg=red
-match Tabs /\t/
-autocmd BufWinEnter * match Tabs /\t\+/
-autocmd InsertEnter * match Tabs /\t\+\%#\@<!/
-autocmd InsertLeave * match Tabs /\t\+/
+highlight Tabs ctermbg=yellow guibg=yellow
+2match Tabs /\t/
+autocmd BufWinEnter * 2match Tabs /\t\+/
+autocmd InsertEnter * 2match Tabs /\t\+\%#\@<!/
+autocmd InsertLeave * 2match Tabs /\t\+/
 
 autocmd BufWinLeave * call clearmatches()
 
