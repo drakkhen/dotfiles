@@ -42,6 +42,7 @@ map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 map <leader># :set number!<cr>
+map <leader>l :set list!<cr>
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
@@ -51,6 +52,7 @@ nnoremap <c-l> <c-w>l
 
 nnoremap <leader><leader> <c-^>
 
+set listchars=tab:▸\ ,eol:¬
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
