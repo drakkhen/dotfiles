@@ -7,5 +7,6 @@ then
     . ~/.git_script
     . ~/.git_complete
 
+    if [ -f ~/.tmate_messages ]; then . ~/.tmate_messages; fi
     if [ -f ~/.bashrc_local ]; then . ~/.bashrc_local; fi
 fi
