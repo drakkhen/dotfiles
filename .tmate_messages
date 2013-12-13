@@ -1,13 +1,10 @@
-if [ `echo $TMUX | grep tmate- | wc -l` -ne 0 ]
+if [ `echo $TMUX | grep tmate- | wc -l` -ne 0 ] && [ `tmux list-windows | wc -l` -eq 1 ] && [ `tmux display-message -p '#P'` -eq 0 ]
 then
-    if [ `tmux list-windows | wc -l` -eq 1 ]
-    then
-        while : ; do
-            sleep .1
-            tmate show-messages | grep -q Reloaded\!
-            [[ $? -ne 0 ]] || break
-        done
+    while : ; do
+        sleep .1
+        tmate show-messages | grep -q Reloaded\!
+        [[ $? -ne 0 ]] || break
+    done
 
-        tmate show-messages | grep Remote\ session | awk -F:\  '{print $2}' | awk -F\( '{print $1}'
-    fi
+    tmate show-messages | grep Remote\ session | awk -F:\  '{print $2}' | awk -F\( '{print $1}'
 fi
