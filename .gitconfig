@@ -34,13 +34,13 @@
     head = !git l -1
     h = !git head
     hp = "!source ~/.githelpers && show_git_head"
+    l = !pretty_git_log
     r = !git l -30
-    ra = !git r --all
-    l = "!source ~/.githelpers && pretty_git_log"
     la = !git l --all
+    ra = !git r --all
 
 [push]
-    default = tracking
+    default = upstream
 [color]
     branch = auto
     diff = auto
@@ -48,6 +48,8 @@
 [core]
     pager = less -M
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [pull]
-	rebase = true
+    rebase = true
+[user]
+	name = drakkhen
