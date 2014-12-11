@@ -221,3 +221,7 @@ autocmd InsertLeave * 2match Tabs /\t\+/
 autocmd BufWinLeave * call clearmatches()
 
 au FileType crontab set nobackup nowritebackup
+
+
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
