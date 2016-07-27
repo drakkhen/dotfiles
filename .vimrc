@@ -204,6 +204,9 @@ colorscheme grb256
 " autocmd FileType css setlocal shiftwidth=2 tabstop=2
 " autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
+hi clear SpellBad
+hi SpellBad cterm=underline,bold ctermfg=red
+
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
