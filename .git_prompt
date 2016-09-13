@@ -35,6 +35,8 @@ p
 # ^ - changed and to be committed
 git_bash_prompt ()
 {
+    if in_git_repository
+    then
         local g="$(git rev-parse --git-dir 2>/dev/null)"
         if [ -n "$g" ]; then
                 local r
@@ -83,6 +85,7 @@ git_bash_prompt ()
                         printf " (%s$(git_check_changes)$(git_remote_changes))" "${b##refs/heads/}$r"
                 fi
         fi
+    fi
 }
 # \h:\W \u\$
 #PS1='\h:\W \u$(git_bash_prompt)\$ '

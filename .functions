@@ -8,6 +8,27 @@ function whatismyip() {
   curl ifconfig.me
 }
 
+function in_git_repository
+{
+    depth=$(($(grep -o / <<< `pwd` | wc -l) + 1 ))
+    cur=0
+    while [ $cur -lt $depth ]; do
+        prefix=""
+        for((i=0;i<$cur;i++))
+        do
+            prefix="../$prefix"
+        done
+
+        if [ -d "$prefix.git" ]
+        then
+            return 0
+        fi
+        let cur+=1
+    done
+
+    return 1
+}
+
 function colors() {
   for i in $(seq 0 8); do printf "\x1b[38;5;${i}m%03d " $i; done
   printf "\n"
