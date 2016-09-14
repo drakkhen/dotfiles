@@ -4,7 +4,7 @@ then
     . ~/.env
     . ~/.dynamic_window_name
 
-    . ~/.git_script
+    . ~/.git_prompt
     . ~/.git_complete
 
     if [ -f ~/.tmate_messages ]; then . ~/.tmate_messages; fi
