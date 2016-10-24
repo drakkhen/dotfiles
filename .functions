@@ -70,3 +70,5 @@ function colors() {
 
   printf "\x1b[0m\n"
 }
+
+if [ -f ~/.functions_local ]; then . ~/.functions_local; fi
