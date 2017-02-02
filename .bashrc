@@ -35,3 +35,5 @@ then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+if [ -f ~/.aliases ]; then . ~/.aliases; fi

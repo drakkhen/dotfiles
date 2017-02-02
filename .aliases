@@ -2,3 +2,6 @@
 
 alias ls='ls -G'
 alias grep='grep --color'
+
+alias changemac='sudo ifconfig en0 ether $1'
+alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com.'

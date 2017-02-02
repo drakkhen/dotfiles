@@ -1,13 +1,5 @@
 #!/bin/bash
 
-function changemac() {
-  sudo ifconfig en0 ether $1
-}
-
-function whatismyip() {
-  curl ifconfig.me
-}
-
 function highlight() {
     declare -A fg_color_map
     fg_color_map[black]=30
