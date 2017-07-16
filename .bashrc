@@ -1,17 +1,3 @@
-GPG_TTY=$(tty)
-export GPG_TTY
-
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-    . "${HOME}/.gpg-agent-info"
-    export GPG_AGENT_INFO
-    export SSH_AUTH_SOCK
-fi
-
-gpg-agent -q 2> /dev/null
-if [[ $? -ne 0 ]]; then
-  eval $(gpg-agent --daemon --write-env-file "${HOME}/.gpg-agent-info")
-fi
-
 function load_git_helpers
 {
     if in_git_repository
