@@ -11,7 +11,6 @@ set showmatch
 set incsearch
 set hlsearch
 set ignorecase smartcase
-set cursorline
 set showcmd
 set wildmenu
 set showtabline=2
