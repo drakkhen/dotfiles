@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function bl_on() {
+    sudo sh -c 'echo 0 > /sys/class/backlight/rpi_backlight/bl_power'
+}
+
+function bl_off() {
+    sudo sh -c 'echo 1 > /sys/class/backlight/rpi_backlight/bl_power'
+}
+
+function bl_level() {
+    sudo sh -c "echo $1 > /sys/class/backlight/rpi_backlight/brightness"
+}

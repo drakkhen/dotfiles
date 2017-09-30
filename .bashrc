@@ -20,6 +20,12 @@ then
     if [ -f ~/.bashrc_local ]; then . ~/.bashrc_local; fi
 fi
 
+grep -qs Raspberry\ Pi /proc/device-tree/model
+if [ $? -eq 0 ]
+then
+    . ~/.pi_functions
+fi
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 if [ -f ~/.aliases ]; then . ~/.aliases; fi
