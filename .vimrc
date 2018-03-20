@@ -42,6 +42,7 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 map <leader># :set number!<cr>
 map <leader>l :set list!<cr>
+map <leader>jq :%!jq '.'<cr>
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
