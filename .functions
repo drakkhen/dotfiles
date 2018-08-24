@@ -63,4 +63,12 @@ function colors() {
   printf "\x1b[0m\n"
 }
 
+function wiki()
+{
+    echo
+    encoded=`printf %s "$@" | jq -s -R -r @uri`
+    curl --data-urlencode "titles=$encoded" -s 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1' | jq -Mr '.query.pages | .[] | .extract' | tr -d '\n' | fold -w 76 -s | sed 's/^/  /'
+    echo
+}
+
 if [ -f ~/.functions_local ]; then . ~/.functions_local; fi
