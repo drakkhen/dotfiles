@@ -1,3 +1,6 @@
+GPG_TTY=$(tty)
+export GPG_TTY
+
 function load_git_helpers
 {
     if in_git_repository
