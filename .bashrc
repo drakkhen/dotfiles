@@ -28,6 +28,18 @@ then
     . ~/.pi_functions
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+if [ -f "$HOME/.rvm/bin" ]
+then
+    export PATH="$PATH:$HOME/.rvm/bin"
+fi
 
-if [ -f ~/.aliases ]; then . ~/.aliases; fi
+if [ -f ~/.aliases ]
+    then . ~/.aliases
+fi
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    if [ -d ~/.fastlane ]
+    then
+        export PATH="$HOME/.fastlane/bin:$PATH"
+    fi
+fi
