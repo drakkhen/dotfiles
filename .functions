@@ -71,4 +71,10 @@ function wiki()
     echo
 }
 
+grep -qs Raspberry\ Pi /proc/device-tree/model
+if [ $? -eq 0 ]
+then
+    . ~/.functions_pi
+fi
+
 if [ -f ~/.functions_local ]; then . ~/.functions_local; fi

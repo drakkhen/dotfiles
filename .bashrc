@@ -22,12 +22,6 @@ then
     if [ -f ~/.bashrc_local ]; then . ~/.bashrc_local; fi
 fi
 
-grep -qs Raspberry\ Pi /proc/device-tree/model
-if [ $? -eq 0 ]
-then
-    . ~/.pi_functions
-fi
-
 if [ -f "$HOME/.rvm/bin" ]
 then
     export PATH="$PATH:$HOME/.rvm/bin"
