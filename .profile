@@ -2,6 +2,8 @@
 GPG_TTY=$(tty)
 export GPG_TTY
 
+export PS1='\[\e[0m\][\u@\h \W]\$ '
+
 [[ -e "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 [[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 [[ -e "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
