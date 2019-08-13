@@ -12,6 +12,7 @@ export TERM=xterm-256color
 
 source "$HOME/.functions"
 source "$HOME/.aliases"
+source "$HOME/.ls_colors"
 
 function maybe_load_git_helpers
 {

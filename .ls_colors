@@ -1,0 +1,18 @@
+#   a/A - black/dark grey    e/E - blue/bold blue
+#   b/B - red/bold red       f/F - magenta/bold magenta
+#   c/C - green/bold green   g/G - cyan/bold cyan
+#   d/D - brown/yellow       h/H - light grey/white
+#     x - default
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+#               | | | | | | | | | | directory writable to others, without sticky bit
+#               | | | | | | | | | directory writable to others, with sticky bit
+#               | | | | | | | | executable with setgid bit set
+#               | | | | | | | executable with setuid bit set
+#               | | | | | | character special
+#               | | | | | block special
+#               | | | | executable
+#               | | | pipe
+#               | | socket
+#               | symbolic link
+#               directory
