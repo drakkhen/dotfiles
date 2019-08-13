@@ -1,6 +1,5 @@
-#!/bin/bash
-
-function highlight() {
+function highlight
+{
     declare -A fg_color_map
     fg_color_map[black]=30
     fg_color_map[red]=31
@@ -36,7 +35,8 @@ function in_git_repository
     return 1
 }
 
-function colors() {
+function colors
+{
   for i in $(seq 0 8); do printf "\x1b[38;5;${i}m%03d " $i; done
   printf "\n"
   for i in $(seq 8 16); do printf "\x1b[38;5;${i}m%03d " $i; done
@@ -63,7 +63,7 @@ function colors() {
   printf "\x1b[0m\n"
 }
 
-function wiki()
+function wiki
 {
     echo
     encoded=`printf %s "$@" | jq -s -R -r @uri`
@@ -72,9 +72,6 @@ function wiki()
 }
 
 grep -qs Raspberry\ Pi /proc/device-tree/model
-if [ $? -eq 0 ]
-then
-    . ~/.functions_pi
-fi
+[[ $? -eq 0 ]] && [[ -e "$HOME/.functions_pi" ]] && source "$HOME/.functions_pi"
 
-if [ -f ~/.functions_local ]; then . ~/.functions_local; fi
+[[ -e "$HOME/.functions_local" ]] && source "$HOME/.functions_local"
