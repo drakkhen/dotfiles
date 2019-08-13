@@ -1,8 +1,9 @@
 #!/bin/bash
-GPG_TTY=$(tty)
-export GPG_TTY
 
+export EDITOR=vim
+export GPG_TTY=$(tty)
 export PS1='\[\e[0m\][\u@\h \W]\$ '
+export TERM=xterm-256color
 
 [[ -e "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 [[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
