@@ -71,6 +71,16 @@ function wiki
     echo
 }
 
+function make_cert
+{
+    subj="/C=${SSL_COUNTRY:-US}/ST=${SSL_STATE:-New York}/L=${SSL_LOCALITY:-New York}/O=${SSL_ORGANIZATION:-Acme Heavy Industries}/OU=${SSL_ORGANIZATION_UNIT:-Bit-Shifting Department}/CN=$1"
+    echo Subject: "$subj"
+    openssl req -nodes -x509 -newkey rsa:4096 -keyout $1.key -out $1.pem -days 9001 -subj "$subj"
+    if [ $? -eq 0 ]; then
+        echo "Created $1.key and $1"
+    fi
+}
+
 grep -qs Raspberry\ Pi /proc/device-tree/model
 [[ $? -eq 0 ]] && [[ -e "$HOME/.functions_pi" ]] && source "$HOME/.functions_pi"
 
