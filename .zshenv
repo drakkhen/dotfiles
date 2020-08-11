@@ -1,14 +1,6 @@
-#!/bin/bash
-
-export EDITOR=vim
-export GPG_TTY=$(tty)
-export PS1='\[\e[0m\][\u@\h \W]\$ '
-export TERM=xterm-256color
-
-[[ -e "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 [[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
-[[ -e "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -d "$HOME/.fastlane" ]] && export PATH="$HOME/.fastlane/bin:$PATH"
+[[ -d "$HOME/local/bin" ]] && export PATH="$HOME/local/bin:$PATH"
 
 source "$HOME/.functions"
 source "$HOME/.aliases"
@@ -28,4 +20,4 @@ function maybe_load_git_helpers
 PROMPT_COMMAND="maybe_load_git_helpers"
 
 [[ -d "$HOME/local/bin" ]] && export PATH="$HOME/local/bin:$PATH"
-[[ -e "$HOME/.profile_local" ]] && source "$HOME/.profile_local"
+[[ -e "$HOME/.zshenv_local" ]] && source "$HOME/.zshenv_local"

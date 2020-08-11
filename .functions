@@ -20,7 +20,7 @@ function in_git_repository
     cur=0
     while [ $cur -lt $depth ]; do
         prefix=""
-        for((i=0;i<$cur;i++))
+        for ((i = 0; i < $cur; i++))
         do
             prefix="../$prefix"
         done
