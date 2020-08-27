@@ -35,7 +35,7 @@ function in_git_repository
     return 1
 }
 
-function colors
+function colors_palette
 {
   for i in $(seq 0 8); do printf "\x1b[38;5;${i}m%03d " $i; done
   printf "\n"
