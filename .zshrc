@@ -1,5 +1,6 @@
-export EDITOR=vim
 bindkey -e
+export ANSIBLE_PIPELINING=1
+export EDITOR=vim
 export GPG_TTY=$(tty)
 export TERM=xterm-256color
 
