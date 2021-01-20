@@ -70,7 +70,7 @@ augroup vimrcEx
     \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType vue,ruby,haml,eruby,yaml,html,js,javascript,sass,cucumber set ai sw=2 sts=2 et
+  autocmd FileType vue,javascript,ruby,haml,eruby,yaml,html,sass,cucumber set ai sw=2 sts=2 et
   autocmd FileType python set sw=4 sts=4 et
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
@@ -90,7 +90,7 @@ augroup vimrcEx
   autocmd! CmdwinLeave * :call MapCR()
 augroup END
 
-set statusline=\ %{fugitive#statusline()}\ %t\ %r\ %y\ format:\ %{&ff};\ L:%l/%L\ (%p%%)\ C:%c%V
+" set statusline=\ %{fugitive#statusline()}\ %t\ %r\ %y\ format:\ %{&ff};\ L:%l/%L\ (%p%%)\ C:%c%V
 
 " Clear the search buffer when hitting return
 function! MapCR()
@@ -225,7 +225,3 @@ autocmd InsertLeave * 2match Tabs /\t\+/
 autocmd BufWinLeave * call clearmatches()
 
 au FileType crontab set nobackup nowritebackup
-
-
-autocmd Filetype python setlocal ts=4 sts=4 sw=4
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
