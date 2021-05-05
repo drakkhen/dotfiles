@@ -21,5 +21,4 @@ function maybe_load_git_helpers
 
 PROMPT_COMMAND="maybe_load_git_helpers"
 
-[[ -d "$HOME/local/bin" ]] && export PATH="$HOME/local/bin:$PATH"
 [[ -e "$HOME/.zshenv_local" ]] && source "$HOME/.zshenv_local"
