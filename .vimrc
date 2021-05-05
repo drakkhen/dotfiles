@@ -188,9 +188,13 @@ set t_Co=256
 set background=dark
 colorscheme grb256
 
-" show vertical ruler at 80 characters
-" set colorcolumn=100
-" highlight ColorColumn ctermbg=233 guibg=#101010
+" show vertical ruler at 100 characters
+hi Normal guibg=#32322f ctermbg=233
+hi NonText guibg=#32322f ctermbg=233
+hi ColorColumn guibg=#000000 ctermbg=0
+let &colorcolumn=join(range(1,100),",")
+
+set ruler
 
 " hi StatusLine ctermfg=233 ctermbg=LightGreen
 " hi StatusLineNC ctermfg=233 ctermbg=Black
