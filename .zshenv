@@ -2,6 +2,8 @@
 [[ -d "$HOME/.fastlane" ]] && export PATH="$HOME/.fastlane/bin:$PATH"
 [[ -d "$HOME/local/bin" ]] && export PATH="$HOME/local/bin:$PATH"
 
+export PATH="$PATH:/usr/local/sbin"
+
 source "$HOME/.functions"
 source "$HOME/.aliases"
 source "$HOME/.ls_colors"
