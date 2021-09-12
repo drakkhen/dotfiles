@@ -1,6 +1,9 @@
 set term=xterm-256color
 syntax on
 
+" Use new regular expression engine (via https://jameschambers.co.uk/vim-typescript-slow)
+set re=0
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
