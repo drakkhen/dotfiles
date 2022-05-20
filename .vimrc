@@ -212,6 +212,8 @@ set ruler
 " autocmd FileType css setlocal shiftwidth=2 tabstop=2
 " autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
+autocmd VimResized * wincmd =
+
 hi clear SpellBad
 hi SpellBad cterm=underline,bold ctermfg=red
 
