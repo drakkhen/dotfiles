@@ -53,3 +53,5 @@
     rebase = true
 [user]
     name = drakkhen
+[init]
+	defaultBranch = main
